@@ -12,9 +12,13 @@
 				<td *ngFor="let col of columns; let i = index" [ngClass]="{'first': i === 0}">
 					<ng-container *ngIf="i === 0; else normalCell">
 						<div [style.display]="'flex'" [style.marginLeft]="(treeNode.depth * 1.3) + 'rem'">
-							<button class="btn btn-link" (click)="onToggleClicked(treeNode)">
+							<button *ngIf="treeNode.children?.length; else noChildren"
+                  class="btn btn-link" (click)="onToggleClicked(treeNode)" >
                 <clr-icon class="toggle" shape="angle" [attr.dir]="treeNode.expanded ? 'down' : 'right'"></clr-icon>
 						  </button>
+              <ng-template #noChildren>
+                <span [style.width.rem]="1.2"></span>
+              </ng-template>
 							<clr-checkbox-wrapper>
 								<input type="checkbox" clrCheckbox />
 								<label>{{ treeNode.data[col.field] }}</label>
