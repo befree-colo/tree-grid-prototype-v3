@@ -1,19 +1,16 @@
-import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from "@angular/forms";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {NgModule} from "@angular/core";
+import {BrowserModule} from "@angular/platform-browser";
+import {FormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
-import { ClarityModule } from "@clr/angular";
+import {ClarityModule} from "@clr/angular";
 
 import "@clr/icons";
 
-import { AppComponent } from "./app.component";
-import { TreeTableComponent } from "./tree-table/tree-table.component";
-import { TreeTableColumnComponent } from "./tree-table/tree-table-column/tree-table-column.component";
-import { TreeTableRowComponent } from "./tree-table/tree-table-row/tree-table-row.component";
-import { TreeTableCellComponent } from "./tree-table/tree-table-row/tree-table-cell/tree-table-cell.component";
-import { TreeNodeService } from "./treenode.service";
-import { HttpClientModule } from "@angular/common/http";
+import {AppComponent} from "./app.component";
+import {TreegridComponent} from "./treegrid/treegrid.component";
+import {TreeNodeService} from "./treenode.service";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   imports: [
@@ -25,10 +22,7 @@ import { HttpClientModule } from "@angular/common/http";
   ],
   declarations: [
     AppComponent,
-    TreeTableComponent,
-    TreeTableColumnComponent,
-    TreeTableRowComponent,
-    TreeTableCellComponent
+    TreegridComponent,
   ],
   bootstrap: [AppComponent],
   providers: [TreeNodeService]

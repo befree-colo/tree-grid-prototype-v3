@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { TreeNode } from "./tree-table/tree-table.component";
+import { TreeNode } from "./treegrid/treegrid.component";
 import { TreeNodeService } from "./treenode.service";
 
 @Component({

@@ -1,21 +1,12 @@
-import {
-  ContentChildren,
-  Component,
-  OnInit,
-  Input,
-  QueryList
-} from "@angular/core";
-import { ClrSelectedState } from "@clr/angular";
-import ChildNode from "@webcomponents/custom-elements/src/Patch/Interface/ChildNode";
-import { TreeTableColumnComponent } from "./tree-table-column/tree-table-column.component";
-import { TreeTableRowComponent } from "./tree-table-row/tree-table-row.component";
+import {Component, Input, OnInit} from "@angular/core";
+import {ClrSelectedState} from "@clr/angular";
 
 @Component({
-  selector: "app-tree-table",
-  templateUrl: "./tree-table.component.html",
-  styleUrls: ["./tree-table.component.scss"]
+  selector: "app-treegrid",
+  templateUrl: "./treegrid.component.html",
+  styleUrls: ["./treegrid.component.scss"]
 })
-export class TreeTableComponent implements OnInit {
+export class TreegridComponent implements OnInit {
   private _value: TreeNode[];
   @Input()
   public set value(newValue: TreeNode[]) {

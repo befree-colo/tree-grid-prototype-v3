@@ -1,0 +1,17 @@
+th, td {
+  text-align: left;
+}
+
+td.first {
+  display: flex;
+
+  .btn {
+    margin: 0.15rem 0.3rem 0 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+    min-width: unset;
+    min-height: unset;
+    line-height: 1rem;
+  }
+}

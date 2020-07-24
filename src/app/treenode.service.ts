@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { TreeNode } from "./tree-table/tree-table.component";
+import { TreeNode } from "./treegrid/treegrid.component";
 
 @Injectable()
 export class TreeNodeService {
