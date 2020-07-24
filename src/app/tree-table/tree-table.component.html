@@ -1,0 +1,31 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th *ngFor="let col of columns">
+				{{ col.header }}
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<ng-container *ngFor="let treeNode of visibleTree">
+			<tr *ngIf="!treeNode.parent || (treeNode.parent && treeNode.parent.expanded)">
+				<td *ngFor="let col of columns; let i = index" [ngClass]="{'first': i === 0}">
+					<ng-container *ngIf="i === 0; else normalCell">
+						<div [style.display]="'flex'" [style.marginLeft]="(treeNode.depth * 1.3) + 'rem'">
+							<button class="btn btn-link" (click)="onToggleClicked(treeNode)">
+                <clr-icon class="toggle" shape="angle" [attr.dir]="treeNode.expanded ? 'down' : 'right'"></clr-icon>
+						  </button>
+							<clr-checkbox-wrapper>
+								<input type="checkbox" clrCheckbox />
+								<label>{{ treeNode.data[col.field] }}</label>
+							</clr-checkbox-wrapper>
+						</div>
+					</ng-container>
+					<ng-template #normalCell>
+						{{ treeNode.data[col.field]}}
+					</ng-template>
+				</td>
+			</tr>
+		</ng-container>
+	</tbody>
+</table>
