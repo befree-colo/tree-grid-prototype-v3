@@ -1,8 +1,4 @@
-th, td {
-  text-align: left;
-}
-
-td.first {
+.datagrid-cell.first {
   display: flex;
 
   .btn {
