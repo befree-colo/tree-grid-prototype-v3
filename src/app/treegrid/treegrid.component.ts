@@ -17,7 +17,7 @@ export class TreegridComponent implements OnInit {
   @Input()
   public columns: { field: string; header: string }[];
 
-  public visibleTree: TreeNode[];
+  public visibleTree: InternalTreeNode[];
 
   constructor() {}
 
